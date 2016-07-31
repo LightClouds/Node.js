@@ -6,5 +6,20 @@
 </head>
 <body>
 
+<script>
+    (function($){
+        var count=1;
+        mm();
+        function mm(){
+            console.log('helle world');
+            KK();   //可以调用得到
+        }
+        KK();//闭包内就可以调用闭包外的函数
+    })();//这就是常见的一个函数被定义后，立即被执行，也就是一个闭包
+//    mm();//闭包外不能调用闭包内的函数，此处不会执行并且报错，出现没有定义
+    function KK(){
+        console.log('helle everyOne')
+    }
+</script>
 </body>
 </html>
