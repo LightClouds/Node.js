@@ -9,8 +9,8 @@ app.set("port",8888);
 app.configure(function(){
       app.use(myexpress.logger("dev"));       //日志模块，写在核心模块上面，dev是开发者模式，日志会打印在console
     /*------------核心模块*/
-    app.use(myexpress.bodyParser());
     app.use(myexpress.methodOverride());
+    app.use(myexpress.bodyParser());
     app.use(app.router);
     app.use(myexpress.static(__dirname+"/client"));
     /*------------核心模块完*/
